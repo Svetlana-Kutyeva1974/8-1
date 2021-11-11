@@ -12,9 +12,7 @@ test('test error toThrow', () => {
 
 test('test успешное добавление', () => {
   const p = new Character('hero', 'Magician');
-  console.log('новый персонаж', p);
   const p0 = new Character('hero1', 'Bowman');
-  console.log('новый персонаж', p0);
   const t = new Team();
   t.add(p);
   t.add(p0);
@@ -22,7 +20,6 @@ test('test успешное добавление', () => {
 });
 
 test('test преобразование в массив', () => {
-  // eslint-disable-next-line no-unused-vars
   const p1 = new Character('hero', 'Magician');
   const p2 = new Character('hero1', 'Bowman');
   const team = new Team();
@@ -33,9 +30,7 @@ test('test преобразование в массив', () => {
 
 test('test успешное добавление', () => {
   const p = new Character('hero', 'Magician');
-  console.log('новый персонаж', p);
   const p0 = new Character('hero1', 'Bowman');
-  console.log('новый персонаж', p0);
   const t = new Team();
   t.addAll(p, p0);
   expect(t).toMatchObject(new Team([p, p0]).members);
